@@ -7,7 +7,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import org.utl.idgs.introkotlin_901.cinepolis.CinepolisActivity
 import org.utl.idgs.introkotlin_901.ejemplo1.SumaActivity
+import org.utl.idgs.introkotlin_901.ejemplo2.SaludoActivity
 
 class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,9 +17,13 @@ class MenuActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_menu)
 
-        val btnSaludo = findViewById<Button>(R.id.btn1)
+        val btnCalculadora = findViewById<Button>(R.id.btn1)
+        val btnSaludo = findViewById<Button>(R.id.btn2)
+        val btnCinepolis = findViewById<Button>(R.id.btnCinepolis)
 
+        btnCalculadora.setOnClickListener {navegateToCalculadora()}
         btnSaludo.setOnClickListener {navegateToSaludo()}
+        btnCinepolis.setOnClickListener {navegateToCinepolis()}
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -25,8 +31,18 @@ class MenuActivity : AppCompatActivity() {
             insets
         }
     }
-    private fun navegateToSaludo() {
+    private fun navegateToCalculadora() {
         val intent = Intent(this, SumaActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navegateToSaludo() {
+        val intent = Intent(this, SaludoActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navegateToCinepolis() {
+        val intent = Intent(this, CinepolisActivity::class.java)
         startActivity(intent)
     }
 }
