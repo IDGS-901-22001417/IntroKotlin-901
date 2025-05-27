@@ -33,4 +33,20 @@
         android:layout_marginTop="30dp"
         android:text="Cinépolis"
         />
+
+    <Button
+        android:id="@+id/btnArchivoTexto"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Archivo de Texto"
+        />
+
+    <Button
+        android:id="@+id/btnDiccionario"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Diccionario"
+        />
 </LinearLayout>

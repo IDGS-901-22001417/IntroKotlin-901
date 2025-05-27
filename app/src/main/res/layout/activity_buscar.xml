@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:background="#1111"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar Palabras"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"
+        android:layout_gravity="center" />
+
+    <RadioGroup
+        android:id="@+id/rgIdioma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp">
+
+        <RadioButton
+            android:id="@+id/rbEspanol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Español"
+            android:textSize="16sp"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            android:textColor="@android:color/black"
+            android:buttonTint="@android:color/black" />
+
+        <RadioButton
+            android:id="@+id/rbIngles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inglés"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:buttonTint="@android:color/black" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Palabra a Buscar"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/etPalabraBuscar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColorHint="#000"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnBuscar"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="Buscar"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Palabra encontrada:"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Palabra"
+        android:textSize="32sp"
+        android:textColor="#00AA00"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="48dp" />
+
+    <Button
+        android:id="@+id/btnRegresarMenuBuscar"
+        android:layout_width="150dp"
+        android:layout_height="62dp"
+        android:text="Regresar al\nMenú"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center" />
+
+</LinearLayout>
